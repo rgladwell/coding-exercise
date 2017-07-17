@@ -9,8 +9,8 @@ class AddressBookParserSpec extends WordSpec with Matchers {
     val resource = getClass.getResourceAsStream("/AddressBook")
     val addressBook = AddressBookParser(resource)
 
-    "read all entries" in {
-      addressBook.items.size shouldBe 5
+    "read all contacts" in {
+      addressBook.contacts.size shouldBe 5
     }
 
   }

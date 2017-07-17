@@ -9,12 +9,12 @@ object AddressBookParser {
   def apply(is: InputStream): AddressBook = {
     val reader = CSVReader.open(Source.fromInputStream(is))
 
-    val items =
+    val contacts =
       for {
         line <- reader.all()
-      } yield Item()
+      } yield Contact()
 
-    AddressBook(items)
+    AddressBook(contacts)
   }
 
 }
