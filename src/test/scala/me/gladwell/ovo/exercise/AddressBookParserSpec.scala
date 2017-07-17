@@ -1,6 +1,7 @@
 package me.gladwell.ovo.exercise
 
 import org.scalatest._
+import java.time._
 
 class AddressBookParserSpec extends WordSpec with Matchers {
 
@@ -20,6 +21,11 @@ class AddressBookParserSpec extends WordSpec with Matchers {
     "read contact gender" in {
       addressBook.contacts.head.gender shouldBe "Male"
     }
+
+    "read contact DOB" in {
+      addressBook.contacts.head.dateOfBirth shouldBe LocalDate.of(1977, Month.MARCH, 16)
+    }
+
   }
 
 }

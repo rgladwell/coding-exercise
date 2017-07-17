@@ -1,3 +1,5 @@
 package me.gladwell.ovo.exercise
 
-case class Contact(name: String, gender: String)
+import java.time.LocalDate
+
+case class Contact(name: String, gender: String, dateOfBirth: LocalDate)
