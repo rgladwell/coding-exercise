@@ -13,6 +13,13 @@ class AddressBookParserSpec extends WordSpec with Matchers {
       addressBook.contacts.size shouldBe 5
     }
 
+    "read contact name" in {
+      addressBook.contacts.head.name shouldBe "Bill McKnight"
+    }
+
+    "read contact gender" in {
+      addressBook.contacts.head.gender shouldBe "Male"
+    }
   }
 
 }

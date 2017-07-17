@@ -12,7 +12,7 @@ object AddressBookParser {
     val contacts =
       for {
         line <- reader.all()
-      } yield Contact()
+      } yield Contact(name = line(0).trim, gender = line(1).trim)
 
     AddressBook(contacts)
   }
